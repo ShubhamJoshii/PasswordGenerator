@@ -18,19 +18,19 @@ function App() {
 
   if (Uppercase) {
     combine = combine + upperalpa;
-    console.log(combine);
+    // console.log(combine);
   }
   if (Lowercase) {
     combine = combine + loweralpa;
-    console.log(combine);
+    // console.log(combine);
   }
   if (specialChar) {
     combine = combine + specialalpa;
-    console.log(combine);
+    // console.log(combine);
   }
   if (NumbersAlw) {
     combine = combine + numberalpa;
-    console.log(combine);
+    // console.log(combine);
   }
   // const change = (e) => {
   //   console.log(e.target.checked);
@@ -45,7 +45,6 @@ function App() {
   };
   // PasswordGenerated()
 
-  console.log(Uppercase.toString());
   const copyToClipboard = () => {
     const newTextarea = document.createElement('textarea');
     newTextarea.innerText = Password
@@ -56,7 +55,7 @@ function App() {
   }
 
   const copyPassword = () =>{
-    console.log("Click")
+    // console.log("Click")
     if(Password == ""){
       
       document.getElementsByClassName('notification')[0].innerHTML="Please firstly! Choice your Password to be Copied"
@@ -85,7 +84,6 @@ function App() {
             <h3 >{Password}</h3>
             <i onClick={copyPassword} class="fa-regular fa-copy copyICON"></i>
           </div>
-
           <br />
           <div className="choice">
             <label htmlFor="length">Password Length</label>
@@ -97,7 +95,7 @@ function App() {
               min="8"
               defaultValue={PasswordLen}
               onChange={(e) => {
-                console.log(e.target.value);
+                // console.log(e.target.value);
                 setPasswordLen(e.target.value);
                 // PasswordGenerated();
               }}
@@ -108,9 +106,9 @@ function App() {
               type="checkbox"
               name="capital"
               id="capital"
-              Checked={Uppercase}
+              checked={Uppercase}
               onChange={(e) => {
-                console.log(e.target.checked);
+                // console.log(e.target.checked);
                 // PasswordGenerated();
                 setUppecase(e.target.checked);
               }}
@@ -126,7 +124,7 @@ function App() {
               // Checked={Lowercase.toString()}
               // Checked={lowersign}
               onChange={(e) => {
-                console.log(e.target.checked);
+                // console.log(e.target.checked);
                 setLowerCase(e.target.checked);
                 // PasswordGenerated();
               }}
@@ -139,7 +137,7 @@ function App() {
               id="number"
               Checked={NumbersAlw}
               onChange={(e) => {
-                console.log(e.target.checked);
+                // console.log(e.target.checked);
                 setNumberAlw(e.target.checked);
                 // PasswordGenerated();
               }}
@@ -153,7 +151,7 @@ function App() {
               id="Special"
               Checked={specialChar}
               onChange={(e) => {
-                console.log(e.target.checked);
+                // console.log(e.target.checked);
                 setSpecialChar(e.target.checked);
                 // PasswordGenerated();
               }}
